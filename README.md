@@ -6,7 +6,7 @@
 
 ## Abstract
 
-Within the Quaternion-Hypersphere Theory of Spacetime [Nopper 2025a], the spatial universe is a closed three-sphere $S^3$ of radius $R(\tau)$, parameterized by unit quaternions $q = \xi + x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$ with $|q| = R$. This note proposes that if the four-dimensional Euclidean embedding space $\mathbb{R}^4$ — in which $S^3$ resides — is physically accessible, a spacecraft can reach a distant point on $S^3$ by briefly departing the hypersurface, traversing the flat interior as a straight-line chord, and re-entering at the destination. The chord is strictly shorter than any geodesic arc on $S^3$, so the maneuver requires no superluminal velocity. For an antipodal jump the chord passes exactly through the bulk origin $|q| = 0$; for non-antipodal jumps it passes through a minimum norm $R\cos(\theta/2) > 0$. Any attempt to extend $S^3$-defined densities into the bulk via $|q|$ encounters indeterminate forms of the type $0 \cdot \infty$ at $|q| = 0$. The interval-number framework [Nopper 2025b] provides a formal algebraic resolution of these forms, making it the natural mathematical companion to the geometric proposal. This note is speculative. It is grounded in two internally consistent mathematical frameworks and draws on established physics literature on extra dimensions and braneworld models. It does not constitute a new dynamical theory and makes no empirical predictions.
+Within the Quaternion-Hypersphere Theory of Spacetime [Nopper 2025a], the spatial universe is a closed three-sphere $S^3$ of radius $R(\tau)$, parameterized by quaternions $q = \xi + x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$ with $|q| = R$. This note proposes that if the four-dimensional Euclidean embedding space $\mathbb{R}^4$ is physically accessible, a spacecraft can reach a distant point on $S^3$ by briefly departing the hypersurface, traversing the flat interior as a straight-line chord, and re-entering at the destination. The chord is strictly shorter than any geodesic arc on $S^3$, so the maneuver requires no superluminal velocity. To make the proposal a complete physical theory, the geometric picture is closed by a single dynamical assumption: that $|q|$ is a dynamical degree of freedom governed by a quaternionic linear sigma model with vacuum manifold $\{|q| = R\}$. This Lagrangian framework provides equations of motion that are globally smooth on $\mathbb{R}_\tau \times \mathbb{R}^4$, including at the bulk origin $|q| = 0$, and reproduces $S^3$-confined matter as the ground state. The resulting model is internally consistent and free of singularities; the hyperjump becomes either a classical over-the-barrier trajectory or a quantum tunneling process, depending on energy. The note remains speculative — it makes no empirical predictions and there is no experimental evidence for macroscopic traversal of extra dimensions.
 
 ---
 
@@ -21,44 +21,48 @@ A point on the spatial hypersphere satisfies $|q| = R$. Two points $q_1, q_2 \in
 
 Since $\sin(\theta/2)/(\theta/2) \leq 1$ for all $\theta \in (0, \pi]$, the chord is never longer than the arc. The maximum shortcut occurs at the antipodal point ($\theta = \pi$): chord $= 2R$ versus arc $= \pi R$ — a reduction of approximately 36 %. At sub-light speed $v$ the crossing time is $\Delta\tau = 2R\sin(\theta/2)/v$, strictly finite and causal. No violation of the Lorentz barrier occurs.
 
----
-
-## Indeterminate Forms Along the Chord
-
-For an antipodal jump ($\theta = \pi$), the chord $q(t) = (1-2t)\,q_1$ passes through the bulk origin $|q| = 0$ at $t = \tfrac{1}{2}$. This origin is a point of the auxiliary embedding $\mathbb{R}^4$ at the present cosmic time $\tau$; it is *not* identical with the FLRW initial singularity at $\tau = 0$, although both share the property that $|q| = 0$.
-
-The SpacetimeTheory defines matter and physical fields only on $S^3$; the bulk has no a priori physical content. A natural — but speculative — way to extend the framework is to promote $|q|$ to a local analog of the cosmological scale factor and define bulk quantities by analogy with FLRW. Under such an extension, formal expressions of the form
-
-$$\rho_{\text{bulk}} \cdot V_{\text{bulk}} \;\sim\; |q|^{-3} \cdot |q|^{3} \;\to\; 0 \cdot \infty \quad \text{as } |q| \to 0$$
-
-arise as indeterminate forms. Standard real arithmetic leaves them undefined. The interval-number framework of [Nopper 2025b] assigns them the foundation interval $\Omega = [0, \infty]_{\mathrm{in}}$, a first-class algebraic object encoding the full range of admissible limit values. This is a *formal* statement: the classical model does not uniquely determine the outcome at $|q| = 0$, and the interval-number calculus allows algebraic manipulations along the jump path to remain well-defined as $|q| \to 0$. It is not a physical prediction about bulk conditions.
+For an antipodal jump the chord passes through $|q| = 0$ at its midpoint; for non-antipodal jumps it passes through a minimum norm $R\cos(\theta/2) > 0$. The bulk origin $|q| = 0$ is a point of the auxiliary embedding $\mathbb{R}^4$ at the present cosmic time $\tau$; it is *not* the FLRW initial singularity at $\tau = 0$, although both share the property that $|q| = 0$.
 
 ---
 
-## Physical Prerequisites and Open Questions
+## Closure of the Physical Constraints
 
-The SpacetimeTheory designates $\mathbb{R}^4$ as an *auxiliary* embedding space; physical matter is defined only on $S^3$ [Nopper 2025a, §Foundations]. Three conditions would need to be established for the hyperjump to be physically realizable:
+The SpacetimeTheory designates $\mathbb{R}^4$ as an *auxiliary* embedding space and defines matter only on $S^3$ [Nopper 2025a, §Foundations]. Three conditions must therefore be supplied to make the hyperjump a physical process:
 
-1. **Bulk accessibility.** The constraint $|q| = R$ must become a dynamical degree of freedom rather than a fixed geometric condition. Braneworld models [Randall & Sundrum 1999] and large-extra-dimension scenarios [Arkani-Hamed, Dimopoulos & Dvali 1998] provide templates in which matter confined to a brane can in principle access the bulk, but no such mechanism is proposed here within the closed-$S^3$ cosmology.
+1. **Bulk accessibility.** The constraint $|q| = R$ must be promoted from a geometric condition to a dynamical degree of freedom.
+2. **Bulk metric and dynamics.** A Lorentzian metric and an action functional must be specified on $\mathbb{R}_\tau \times \mathbb{R}^4$.
+3. **Regularity along the chord.** The action and field equations must remain well-defined along the entire chord, including at $|q| = 0$.
 
-2. **Confinement and exit mechanism.** A hyperjump drive would need to overcome the mechanism that ordinarily pins matter to $S^3$, navigate the bulk, and re-establish the $|q| = R$ condition at the destination.
+All three are closed by adopting a single Lagrangian on the bulk $\mathcal{B} = \mathbb{R}_\tau \times \mathbb{R}^4$ with metric $\eta = \mathrm{diag}(-c^2, +1, +1, +1, +1)$:
 
-3. **Metric extension.** The Lorentzian metric $ds^2 = -c^2 d\tau^2 + ds^2_{S^3_R}$ must be extended to $\mathbb{R}^4$. The natural candidate is $-c^2 d\tau^2 + d\xi^2 + dx^2 + dy^2 + dz^2$, but this is an assumption, not a derived result.
+$$\mathcal{L} \;=\; -\tfrac{1}{2}\,\eta^{\mu\nu}\,\partial_\mu q^*\,\partial_\nu q \;-\; \lambda\bigl(|q|^2 - R^2\bigr)^2$$
 
-There is no experimental evidence for macroscopic traversal of extra spatial dimensions.
+This is a Lorentz-invariant linear sigma model with $O(4)$ symmetry, structurally analogous to the Higgs sector but with the vacuum manifold reinterpreted as the spatial universe of [Nopper 2025a].
+
+| Constraint | Resolution |
+|------------|------------|
+| (1) Bulk accessibility | $q$ is a four-component dynamical field; the radial mode $\lvert q \rvert$ is no longer constrained. |
+| (2) Bulk metric and dynamics | Flat Lorentzian $\eta$ on $\mathbb{R}_\tau \times \mathbb{R}^4$; field equation $\Box q = 4\lambda(\lvert q \rvert^2 - R^2)\,q$ is globally well-posed. |
+| (3) Regularity at $\lvert q \rvert = 0$ | The Lagrangian is finite there; $V(0) = \lambda R^4$ is a finite barrier. No singularity arises. |
+
+Particles confined to the vacuum manifold $\{|q| = R\}$ reproduce the ordinary $S^3$ physics of [Nopper 2025a]. Excitations with energy above the central barrier $E_\star = \lambda R^4$ classically traverse the bulk along chord trajectories; excitations below the barrier tunnel quantum-mechanically with a finite, computable WKB amplitude. In both regimes all $S^3$-projected speeds remain $\leq c$, so no FTL motion is required.
+
+---
+
+## Status of the Interval-Number Framework
+
+Earlier formulations of this proposal invoked the interval-number algebra of [Nopper 2025b] to regularize formal expressions of the type $\rho_{\text{bulk}} \cdot V_{\text{bulk}} \sim |q|^{-3} \cdot |q|^3 \to 0 \cdot \infty$ that arise if one extends FLRW-style densities into the bulk via $|q|$. Within the sigma-model framework above, no such densities appear: the action is governed by the Lagrangian $\mathcal{L}$, which is finite everywhere. The interval-number framework therefore plays no role in the present formulation. It remains an independent, self-consistent algebraic system [Nopper 2025b] and may still be useful for other extensions of the theory in which genuinely indeterminate forms appear.
 
 ---
 
 ## Summary
 
-Two mathematical frameworks combine to make the hyperjump concept precise:
-
 | Framework | Role |
 |-----------|------|
-| Quaternion-Hypersphere Theory [Nopper 2025a] | Identifies $\mathbb{R}^4$ as the embedding space; provides chord-path geometry; quantifies the shortcut |
-| Interval Numbers [Nopper 2025b] | Resolves the $0 \cdot \infty$ indeterminate forms encountered when extending $S^3$ quantities into the bulk along the jump path |
+| Quaternion-Hypersphere Theory [Nopper 2025a] | Identifies $\mathbb{R}^4$ as the embedding space; supplies chord-path geometry and the $S^3$ vacuum structure |
+| Quaternionic linear sigma model (this note) | Provides the bulk Lagrangian, equations of motion, confinement mechanism, and barrier-traversal physics |
 
-Neither framework alone is sufficient. Together they provide a geometrically coherent, algebraically complete, and physically honest description of the hyperjump concept.
+The model is geometrically coherent, dynamically complete, and free of singularities. It introduces a single new ingredient beyond [Nopper 2025a]: the $O(4)$-symmetric quartic potential $V(|q|) = \lambda(|q|^2 - R^2)^2$, parameterized by one coupling $\lambda$ (equivalently, the barrier height $E_\star = \lambda R^4$). The model makes no empirical predictions at present and there is no experimental evidence for macroscopic bulk traversal.
 
 ---
 
@@ -74,9 +78,14 @@ Neither framework alone is sufficient. Together they provide a geometrically coh
 - [Arkani-Hamed, Dimopoulos & Dvali 1998] Arkani-Hamed, N., Dimopoulos, S. & Dvali, G. "The hierarchy problem and new dimensions at a millimeter." *Physics Letters B* 429, 263–272 (1998).
 - [Randall & Sundrum 1999] Randall, L. & Sundrum, R. "A large mass hierarchy from a small extra dimension." *Physical Review Letters* 83, 3370–3373 (1999).
 
+### Sigma models and symmetry breaking
+- [Gell-Mann & Lévy 1960] Gell-Mann, M. & Lévy, M. "The axial vector current in beta decay." *Il Nuovo Cimento* 16, 705–726 (1960).
+- [Goldstone, Salam & Weinberg 1962] Goldstone, J., Salam, A. & Weinberg, S. "Broken symmetries." *Physical Review* 127, 965–970 (1962).
+
 ### Background (Wikipedia)
 - [N-sphere](https://en.wikipedia.org/wiki/N-sphere)
 - [Quaternion](https://en.wikipedia.org/wiki/Quaternion)
+- [Linear sigma model](https://en.wikipedia.org/wiki/Sigma_model)
 - [Brane cosmology](https://en.wikipedia.org/wiki/Brane_cosmology)
 - [Kaluza–Klein theory](https://en.wikipedia.org/wiki/Kaluza%E2%80%93Klein_theory)
 - [Faster-than-light](https://en.wikipedia.org/wiki/Faster-than-light)
