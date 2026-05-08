@@ -70,6 +70,59 @@ A consistent closure of items 1–2 alone would already promote the proposal fro
 
 ---
 
+## Experimental Programme
+
+The model's predictions split cleanly into two regimes: properties of the *underlying sigma-model and brane structure*, which are testable with existing or near-term experiments, and properties of *macroscopic chord traversal itself*, which are not testable with any foreseeable technology.
+
+### Tier 1 — Tests parasitic on running or near-term experiments
+
+| Observable | What it constrains | Status |
+|------------|-------------------|--------|
+| Sub-mm gravity (Eöt-Wash, MICROSCOPE) | Brane thickness $\ell_\perp \to$ bound on $\lambda$ via Subproblem 5 | Currently $\ell_\perp \lesssim 44\,\mu\text{m}$ [Adelberger et al. 2003]; next-generation reaches $\sim\!1\,\mu\text{m}$ |
+| Fifth-force / new long-range vector searches | Residual unbroken $SO(3)$ gauge bosons (Subproblem 4) must be confined or below sensitivity | Tight bounds on any massless vector mediator |
+| CMB scalar/tensor ratio (Planck, LiteBIRD, CMB-S4) | Shape of the inflaton potential $U(\Phi)$ in Subproblem 1 | Tightening $r$ disfavours specific $U(\Phi)$ |
+| Spatial-curvature and topology tests (CMB matched circles) | The model presupposes a closed $S^3$ universe of finite radius $R$ | Data consistent with flat or slightly closed; no positive detection |
+
+### Tier 2 — Dedicated or next-generation facilities
+
+| Observable | What it constrains |
+|------------|-------------------|
+| KK-like resonances and missing-energy events at HL-LHC / FCC-hh | Bulk-propagating excitations of $q^A$; matter briefly entering the bulk |
+| Precision Higgs couplings | Mixing between the SM Higgs and the sigma-model field $q^A$ |
+| Dark-energy equation of state $w(z)$ | Trajectory of $\Phi(\tau)$ on $U(\Phi)$ |
+| Astroparticle anomalies | High-energy cosmic rays exciting bulk modes (very weak signature) |
+
+### Tier 3 — The hyperjump itself
+
+Given the exponential suppression in Subproblem 7, no terrestrial experiment can plausibly produce a macroscopic chord traversal. Conceptual milestones, in increasing order of difficulty:
+
+1. **Microscopic tunnelling event.** Observation of a single quantum appearing at an unexpected location with a rate consistent with the bounce calculation, after excluding all conventional channels. Astronomically rare for any $\lambda$ within current bounds.
+2. **Coherent-source proof of principle.** A configuration raising $q^A$ above the central barrier in a small region. Required energy density $\rho_\star = \lambda R^4$ is far beyond Planck-scale densities for cosmological $R$ — effectively impossible with known physics.
+3. **Macroscopic chord traversal.** Direct observation of an object appearing near its antipode in less than light-travel time on $S^3$. Not forbidden by the framework, but on no plausible engineering horizon.
+
+### Falsification criteria
+
+The proposal is *falsified* (in the strong Popperian sense) if any of the following obtains:
+
+- Sub-mm gravity tests push $\ell_\perp$ below the value required for any acceptable $\lambda$ given Subproblem 7's tunnelling rate (i.e. the parameter space closes from both sides);
+- Cosmological observations conclusively establish a flat or open spatial universe ($\Omega_k \geq 0$ to high precision), eliminating the $S^3$ premise of [Nopper 2025a];
+- Precision tests of Lorentz invariance in vacuum exclude the bulk light-cone reformulation of Subproblem 6;
+- The Standard Model Higgs is shown not to admit a sigma-model lift consistent with $O(4) \to O(3)$ breaking on a brane.
+
+### Honest summary
+
+The *theory* is empirically engageable through existing programmes; Tier 1 alone could in principle falsify it within a decade. The *device* — hyperjump propulsion — is not on any plausible engineering horizon and would require physics or technology beyond what is currently available.
+
+### In-principle possibility
+
+Subject to the obvious disclaimers, the framework contains no in-principle prohibition against constructing a hyperjump device. What it contains are quantitative obstacles: depositing energy density $\rho_\star = \lambda R^4$ coherently in the cargo volume (Planck-scale for $\lambda$ and $R$ at present bounds), maintaining quantum coherence of the bulk excitation across the chord, and either accepting the exponentially small spontaneous tunnelling rate or engineering a resonant/stimulated enhancement. Each is severe; none is forbidden.
+
+In this respect the proposal sits in the same epistemic category as traversable wormholes [Morris & Thorne 1988] and the Alcubierre warp metric [Alcubierre 1994]: physically permitted within a self-consistent theoretical framework, but with engineering requirements far beyond present extrapolation. One distinguishing feature is worth noting: the chord traversal **does not require exotic (negative energy-density) matter**. It requires only ordinary positive-energy excitations of the sigma-model field above a finite barrier $V(0) = \lambda R^4$. This is a structural improvement over the GR-based alternatives, where the energy conditions of general relativity must be violated, even if the absolute scale of the required excitation remains daunting.
+
+The honest classification is therefore: *in-principle possible, technologically remote, and conceptually preferable to negative-energy-density proposals*.
+
+---
+
 ## Note on the Interval-Number Framework
 
 Earlier formulations of this proposal invoked the interval-number algebra of [Nopper 2025b] to regularize formal expressions of the type $\rho_{\text{bulk}} \cdot V_{\text{bulk}} \sim |q|^{-3} \cdot |q|^3 \to 0 \cdot \infty$ that arise if one extends FLRW-style densities into the bulk via $|q|$. Within the sigma-model skeleton above, no such densities appear: the action is governed by the Lagrangian $\mathcal{L}$, which is finite everywhere. The interval-number framework therefore plays no role in the present formulation. It remains an independent, self-consistent algebraic system [Nopper 2025b] and may still be useful for other extensions of the theory in which genuinely indeterminate forms appear.
@@ -98,6 +151,10 @@ The model is **geometrically coherent and singularity-free**, but **not yet dyna
 - [Klein 1926] Klein, O. "Quantentheorie und fünfdimensionale Relativitätstheorie." *Zeitschrift für Physik* 37, 895–906 (1926).
 - [Arkani-Hamed, Dimopoulos & Dvali 1998] Arkani-Hamed, N., Dimopoulos, S. & Dvali, G. "The hierarchy problem and new dimensions at a millimeter." *Physics Letters B* 429, 263–272 (1998).
 - [Randall & Sundrum 1999] Randall, L. & Sundrum, R. "A large mass hierarchy from a small extra dimension." *Physical Review Letters* 83, 3370–3373 (1999).
+
+### Speculative spacetime engineering (for comparison)
+- [Morris & Thorne 1988] Morris, M. S. & Thorne, K. S. "Wormholes in spacetime and their use for interstellar travel: A tool for teaching general relativity." *American Journal of Physics* 56, 395–412 (1988).
+- [Alcubierre 1994] Alcubierre, M. "The warp drive: hyper-fast travel within general relativity." *Classical and Quantum Gravity* 11, L73–L77 (1994).
 
 ### Sigma models, symmetry breaking, brane localization, tunnelling
 - [Gell-Mann & Lévy 1960] Gell-Mann, M. & Lévy, M. "The axial vector current in beta decay." *Il Nuovo Cimento* 16, 705–726 (1960).
