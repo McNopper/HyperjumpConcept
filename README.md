@@ -18,8 +18,8 @@ A point on the spatial hypersphere satisfies $\lvert X\rvert = R_{\rm geom}$. (N
 
 | Path | Parameterization | Length |
 |------|-----------------|--------|
-| Geodesic on $S^3$ (normal travel) | $\text{slerp}(X_1, X_2,\, t)$, $\lVert X(t) \rVert = R_{\rm geom}$ | $R_{\rm geom}\theta$ |
-| Chord through $\mathbb{R}^4$ bulk (hyperjump) | $(1-t)\,X_1 + t\,X_2$, $\lVert X(t) \rVert \leq R_{\rm geom}$ | $2R_{\rm geom}\sin(\theta/2)$ |
+| Geodesic on `S^3` (normal travel) | `slerp(X_1, X_2, t)`, with `norm(X(t)) = R_geom` | `R_geom * theta` |
+| Chord through `R^4` bulk (hyperjump) | `(1 - t) X_1 + t X_2`, with `norm(X(t)) <= R_geom` | `2 R_geom sin(theta/2)` |
 
 Since $\sin(\theta/2)/(\theta/2) \leq 1$ for all $\theta \in (0, \pi]$, the chord is never longer than the arc. The maximum shortcut occurs at the antipodal point ($\theta = \pi$): chord $= 2R_{\rm geom}$ versus arc $= \pi R_{\rm geom}$ — a reduction of approximately 36 %. At bulk speed $u \leq c$ the crossing time is $\Delta\tau = 2R_{\rm geom}\sin(\theta/2)/u$, strictly finite and timelike with respect to the bulk metric.
 
@@ -45,9 +45,9 @@ The skeleton does three things:
 
 | Feature | Mechanism |
 |---------|-----------|
-| Brane localization becomes dynamical | Matter confinement is controlled by $\phi_0^A(r)$ rather than imposed as the kinematic constraint $\lvert X\rvert=R_{\rm geom}$ |
-| Equations of motion are globally smooth | $\Box \phi^A = 4\lambda\bigl(\lvert\phi\rvert^2-v^2\bigr)\phi^A$ is well-posed everywhere on $\mathcal{B}$, including at $\phi^A=0$ |
-| The central field configuration is non-singular | $V(0)=\lambda v^4$ is finite; leaving the brane encounters a finite barrier, not a divergence |
+| Brane localization becomes dynamical | Matter confinement is controlled by `phi_0^A(r)` rather than imposed as the kinematic constraint `norm(X) = R_geom` |
+| Equations of motion are globally smooth | `Box phi^A = 4 lambda (norm(phi)^2 - v^2) phi^A` is well-posed everywhere on the bulk, including at `phi^A = 0` |
+| The central field configuration is non-singular | `V(0) = lambda v^4` is finite; leaving the brane encounters a finite barrier, not a divergence |
 
 Excitations with energy density above the central barrier $\rho_\star=\lambda v^4$ can in principle push localized states into the bulk along chord trajectories; excitations below the barrier tunnel quantum-mechanically. The appropriate semiclassical estimate is a Euclidean bounce/instanton calculation of Coleman type; once gravity is included, the relevant extension is Coleman–De Luccia rather than a 1D-WKB formula. The parameters $\lambda$ and $v$ control the *brane thickness* $\ell_\perp \sim 1/(\sqrt{\lambda}\,v)$, the *barrier energy density* $\rho_\star=\lambda v^4$, and via $\rho_\star V_{\text{cargo}} c\Delta\tau$ the parametric *energy cost* of transporting an object through the bulk.
 
@@ -80,34 +80,34 @@ The model's predictions split cleanly into two regimes: properties of the *under
 
 | Observable | What it constrains | Status |
 |------------|-------------------|--------|
-| Sub-mm gravity (Eöt-Wash and successors) | Brane thickness $\ell_\perp \to$ bound on $\sqrt\lambda\,v$ via Subproblem 5 | Currently $\ell_\perp \lesssim 44\,\mu\text{m}$ [Adelberger et al. 2003]; next-generation reaches $\sim\!1\,\mu\text{m}$ |
-| Fifth-force / new long-range vector searches | Residual unbroken $SO(3)$ gauge bosons (Subproblem 4) must be confined or below sensitivity | Tight bounds on any massless vector mediator |
+| Sub-mm gravity (Eöt-Wash and successors) | Brane thickness `ell_perp` constrains `sqrt(lambda) v` via Subproblem 5 | Currently `ell_perp <~ 44 micrometres` [Adelberger et al. 2003]; next-generation reaches roughly `1 micrometre` |
+| Fifth-force / new long-range vector searches | Residual unbroken `SO(3)` gauge bosons (Subproblem 4) must be confined or below sensitivity | Tight bounds on any massless vector mediator |
 | Vacuum Lorentz-invariance / preferred-frame tests | Approximate brane Lorentz invariance required by Subproblem 6 | Existing bounds require any bulk-frame effects to be strongly suppressed |
-| CMB scalar/tensor ratio (Planck, LiteBIRD, CMB-S4) | Shape of the inflaton potential $U(\Phi)$ in Subproblem 1 | Tightening $r$ disfavours specific $U(\Phi)$ |
-| Spatial-curvature and topology tests (CMB matched circles) | The model presupposes a closed $S^3$ universe of finite radius $R_{\rm geom}$ | Data consistent with flat or slightly closed; no positive detection |
+| CMB scalar/tensor ratio (Planck, LiteBIRD, CMB-S4) | Shape of the inflaton potential `U(Phi)` in Subproblem 1 | Tightening `r` disfavours specific `U(Phi)` |
+| Spatial-curvature and topology tests (CMB matched circles) | The model presupposes a closed three-sphere universe of finite radius `R_geom` | Data consistent with flat or slightly closed; no positive detection |
 
 ### Tier 2 — Dedicated or next-generation facilities
 
 | Observable | What it constrains |
 |------------|-------------------|
-| KK-like resonances and missing-energy events at HL-LHC / FCC-hh | Bulk-propagating excitations of $\phi^A$; matter briefly entering the bulk |
-| Precision Higgs couplings | Mixing between the SM Higgs and the radial (massive) mode of $\phi^A$ |
-| Dark-energy equation of state $w(z)$ | Trajectory of $\Phi(\tau)$ on $U(\Phi)$ |
+| KK-like resonances and missing-energy events at HL-LHC / FCC-hh | Bulk-propagating excitations of `phi^A`; matter briefly entering the bulk |
+| Precision Higgs couplings | Mixing between the SM Higgs and the radial (massive) mode of `phi^A` |
+| Dark-energy equation of state `w(z)` | Trajectory of `Phi(tau)` on `U(Phi)` |
 
 ### Tier 3 — The hyperjump itself
 
 Given the exponential suppression in Subproblem 7, no terrestrial experiment can plausibly produce a macroscopic chord traversal. Conceptual milestones, in increasing order of difficulty:
 
-1. **Microscopic tunnelling event.** Observation of a single quantum appearing at an unexpected location with a rate consistent with the bounce calculation, after excluding all conventional channels. Astronomically rare for any currently allowed $(\lambda,v,\phi_0)$ background.
-2. **Coherent-source proof of principle.** A configuration raising $\phi^A$ above the central barrier in a small region. The required energy density $\rho_\star=\lambda v^4$ is bounded below indirectly through Subproblem 5's lower bound on $\sqrt\lambda\,v$, and for any macroscopic cargo is extreme by any laboratory standard — qualitatively comparable to the absolute energy-scale problem in warp/wormhole proposals, though here with positive sign.
-3. **Macroscopic chord traversal.** Direct observation of an object appearing near its antipode in less than light-travel time on $S^3$. Not forbidden by the framework, but on no plausible engineering horizon.
+1. **Microscopic tunnelling event.** Observation of a single quantum appearing at an unexpected location with a rate consistent with the bounce calculation, after excluding all conventional channels. Astronomically rare for any currently allowed `(lambda, v, phi_0)` background.
+2. **Coherent-source proof of principle.** A configuration raising `phi^A` above the central barrier in a small region. The required energy density `rho_* = lambda v^4` is bounded below indirectly through Subproblem 5's lower bound on `sqrt(lambda) v`, and for any macroscopic cargo is extreme by any laboratory standard — qualitatively comparable to the absolute energy-scale problem in warp/wormhole proposals, though here with positive sign.
+3. **Macroscopic chord traversal.** Direct observation of an object appearing near its antipode in less than light-travel time on `S^3`. Not forbidden by the framework, but on no plausible engineering horizon.
 
 ### Falsification criteria
 
 The proposal is *falsified* (in the strong Popperian sense) if any of the following obtains:
 
-- Cosmological curvature and topology constraints drive the allowed parameter interval entirely outside the closed-$S^3$ geometry required by [Nopper 2025a];
-- Sub-mm gravity, fifth-force, and localization constraints leave no overlapping parameter region for $\ell_\perp$, $\lambda$, $v$, and the Standard-Model zero-mode profiles;
+- Cosmological curvature and topology constraints drive the allowed parameter interval entirely outside the closed three-sphere geometry required by [Nopper 2025a];
+- Sub-mm gravity, fifth-force, and localization constraints leave no overlapping parameter region for `ell_perp`, `lambda`, `v`, and the Standard-Model zero-mode profiles;
 - Precision tests of Lorentz invariance in vacuum exclude the bulk light-cone reformulation of Subproblem 6 at the level required for the chord trajectories to remain consistent with observed brane physics;
 - A graviton Kaluza-Klein tower with mass spacing or angular-momentum content inconsistent with a single transverse non-compact dimension is established at any future collider or astrophysical observation.
 
@@ -135,8 +135,8 @@ Earlier formulations of this proposal invoked the interval-number algebra of [No
 
 | Framework | Role |
 |-----------|------|
-| Quaternion-Hypersphere Theory [Nopper 2025a] | Identifies $\mathbb{R}^4$ as the embedding space and supplies the chord-path geometry of the closed $S^3$ universe |
-| Quaternionic linear sigma model (this note) | Provides a candidate bulk Lagrangian for an order-parameter field $\phi^A$ whose background profile localizes matter near $S^3$ and whose excited states can enter the bulk |
+| Quaternion-Hypersphere Theory [Nopper 2025a] | Identifies `R^4` as the embedding space and supplies the chord-path geometry of the closed `S^3` universe |
+| Quaternionic linear sigma model (this note) | Provides a candidate bulk Lagrangian for an order-parameter field `phi^A` whose background profile localizes matter near `S^3` and whose excited states can enter the bulk |
 
 The model is **geometrically coherent and singularity-free**, but **not yet dynamically complete**: the eight open subproblems listed above must be closed before it can be considered a candidate physical theory. Each admits a textbook-level first-pass closure sketched inline (with item 8 framed as a Wilsonian-EFT deferral), but full closure of any one item is itself a non-trivial research programme. It introduces, beyond [Nopper 2025a], the $O(4)$-symmetric quartic potential $V(\phi)=\lambda(\phi^A\phi^A-v^2)^2$ with coupling $\lambda$ and vev $v$. These parameters have clean physical interpretations (barrier energy density $\rho_\star=\lambda v^4$, brane thickness $\ell_\perp\sim1/(\sqrt{\lambda}\,v)$, transit-energy cost $\rho_\star V_{\text{cargo}}c\Delta\tau$) but no fixed numerical values at present. The model makes no unique precision predictions yet, and there is no experimental evidence for macroscopic bulk traversal.
 
