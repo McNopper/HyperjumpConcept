@@ -16,8 +16,8 @@ A point on the spatial hypersphere satisfies $|q| = R$. Two points $q_1, q_2 \in
 
 | Path | Parameterization | Length |
 |------|-----------------|--------|
-| Geodesic on $S^3$ (normal travel) | $\text{slerp}(q_1, q_2,\, t)$, $\|q(t)\| = R$ | $R\theta$ |
-| Chord through $\mathbb{R}^4$ bulk (hyperjump) | $(1-t)\,q_1 + t\,q_2$, $\|q(t)\| \leq R$ | $2R\sin(\theta/2)$ |
+| Geodesic on $S^3$ (normal travel) | $\text{slerp}(q_1, q_2,\, t)$, $\lVert q(t) \rVert = R$ | $R\theta$ |
+| Chord through $\mathbb{R}^4$ bulk (hyperjump) | $(1-t)\,q_1 + t\,q_2$, $\lVert q(t) \rVert \leq R$ | $2R\sin(\theta/2)$ |
 
 Since $\sin(\theta/2)/(\theta/2) \leq 1$ for all $\theta \in (0, \pi]$, the chord is never longer than the arc. The maximum shortcut occurs at the antipodal point ($\theta = \pi$): chord $= 2R$ versus arc $= \pi R$ — a reduction of approximately 36 %. At sub-light speed $v$ the crossing time is $\Delta\tau = 2R\sin(\theta/2)/v$, strictly finite and causal. No violation of the Lorentz barrier occurs.
 
