@@ -6,7 +6,7 @@
 
 ## Abstract
 
-Within the Quaternion-Hypersphere Theory of Spacetime [Nopper 2025a], the spatial universe is a closed three-sphere $S^3$ of radius $R(\tau)$, parameterized by quaternions $q = \xi + x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$ with $|q| = R$. This note proposes that if the four-dimensional Euclidean embedding space $\mathbb{R}^4$ is physically accessible, a spacecraft can reach a distant point on $S^3$ by briefly departing the hypersurface, traversing the flat interior as a straight-line chord, and re-entering at the destination. The chord is strictly shorter than any geodesic arc on $S^3$, although in operational terms — for an observer confined to $S^3$ — the traveller arrives sooner than an $S^3$ light signal would, so the manoeuvre is effectively superluminal in $S^3$ projection while remaining timelike in the bulk. As a candidate dynamical skeleton we propose a quaternionic linear sigma model in which $|q|$ is a dynamical degree of freedom and the vacuum manifold $\{|q| = R\}$ confines ordinary matter to $S^3$. The resulting field equations are globally smooth on $\mathbb{R}_\tau \times \mathbb{R}^4$, including at $|q| = 0$, and the hyperjump becomes either a classical over-the-barrier trajectory or a quantum tunnelling process. Several substantial pieces remain to be supplied — coupling to gravity, dynamical $R(\tau)$, Standard-Model matter content, Goldstone-mode mass, and a fixed value for the single coupling $\lambda$. These open subproblems are listed explicitly. This note is therefore best read as a *programme* rather than a finished theory; it makes no empirical predictions, and there is no experimental evidence for macroscopic traversal of extra dimensions.
+Within the Quaternion-Hypersphere Theory of Spacetime [Nopper 2025a], the spatial universe is a closed three-sphere $S^3$ of radius $R(\tau)$, parameterized by quaternions $q = \xi + x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$ with $|q| = R$. This note examines whether two points of $S^3$ separated by an angular distance $\theta$ can be connected by a trajectory that leaves the hypersurface, traverses the interior of the four-dimensional Euclidean embedding $\mathbb{R}^4$ as a straight chord, and re-enters at the destination. The chord is strictly shorter than any geodesic arc on $S^3$; in operational terms — for an observer confined to $S^3$ — the traveller arrives sooner than a light signal travelling along $S^3$ would, so the trajectory is superluminal in $S^3$ projection while remaining timelike in the bulk metric. As a candidate dynamical skeleton we propose a quaternionic linear sigma model in which $|q|$ is a dynamical degree of freedom and the vacuum manifold $\{|q| = R\}$ confines ordinary matter to $S^3$. The resulting field equations are globally smooth on $\mathbb{R}_\tau \times \mathbb{R}^4$, including at $|q| = 0$, and the chord-traversal becomes either a classical over-the-barrier trajectory or a quantum-tunnelling process. Several substantial pieces remain to be supplied — coupling to gravity, dynamical $R(\tau)$, Standard-Model matter content, the Goldstone-mode mass problem, and a fixed value for the single coupling $\lambda$. These open subproblems are listed explicitly. The note is therefore best read as a *programme* rather than a finished theory; it makes no empirical predictions, and there is no experimental evidence for macroscopic traversal of extra dimensions.
 
 ---
 
@@ -23,7 +23,7 @@ A point on the spatial hypersphere satisfies $|q| = R$. Two points $q_1, q_2 \in
 
 Since $\sin(\theta/2)/(\theta/2) \leq 1$ for all $\theta \in (0, \pi]$, the chord is never longer than the arc. The maximum shortcut occurs at the antipodal point ($\theta = \pi$): chord $= 2R$ versus arc $= \pi R$ — a reduction of approximately 36 %. At bulk speed $v \leq c$ the crossing time is $\Delta\tau = 2R\sin(\theta/2)/v$, strictly finite and timelike with respect to the bulk metric.
 
-It must be acknowledged that *from the perspective of an $S^3$-confined observer* the chord traverser arrives sooner than a light signal travelling along $S^3$ between the same endpoints. The effective $S^3$-projected speed for an antipodal chord at bulk speed $c$ is $\pi c / 2 \approx 1.57\,c$. The manoeuvre is therefore operationally superluminal in $S^3$ projection. This is consistent with the bulk light-cone but in tension with the FTL prohibition in [Nopper 2025a, §Light-Speed Bound], which is formulated *intrinsically* on $S^3$. Resolving this tension — either by extending [Nopper 2025a]'s causal-cone definition to the bulk, or by introducing a chronology-protection mechanism — is one of the open subproblems below.
+It must be acknowledged that *from the perspective of an $S^3$-confined observer* the chord traverser arrives sooner than a light signal travelling along $S^3$ between the same endpoints. The effective $S^3$-projected speed for an antipodal chord at bulk speed $c$ is $\pi c / 2 \approx 1.57\,c$. The trajectory is therefore operationally superluminal in $S^3$ projection. This is consistent with the bulk light-cone but in tension with the FTL prohibition in [Nopper 2025a, §Light-Speed Bound], which is formulated *intrinsically* on $S^3$. Resolving this tension — either by extending [Nopper 2025a]'s causal-cone definition to the bulk, or by introducing a chronology-protection mechanism — is one of the open subproblems below.
 
 For an antipodal jump the chord passes through $|q| = 0$ at its midpoint; for non-antipodal jumps it passes through a minimum norm $R\cos(\theta/2) > 0$. The bulk origin $|q| = 0$ is a point of the auxiliary embedding $\mathbb{R}^4$ at the present cosmic time $\tau$; it is *not* the FLRW initial singularity at $\tau = 0$, although both share the property that $|q| = 0$.
 
@@ -53,9 +53,9 @@ This much is a clean kinematic skeleton. It is **not yet a complete physical the
 
 ---
 
-## Open Subproblems (Roadmap)
+## Open Subproblems
 
-The skeleton above leaves seven substantial pieces unsupplied. Each is an explicit programme item; the model becomes a candidate physical theory only when all are addressed.
+The skeleton above leaves seven substantial pieces unsupplied. Each is an explicit open problem; the model becomes a candidate physical theory only when all are addressed.
 
 1. **Cosmic expansion.** [Nopper 2025a] has $R = R(\tau)$ (FLRW). The static $R$ in $\mathcal{L}$ is incompatible. Suggested resolution: promote $R$ to a slowly-rolling scalar with its own potential $U(R)$, recovering Friedmann dynamics from the field equation for $R$.
 2. **Coupling to gravity.** The bulk is treated as flat. To recover the FLRW geometry as a *solution* rather than a postulate, the action must be coupled to 5D General Relativity, $S = \int d^5x\sqrt{-g}\,[\mathcal{R}^{(5)}/(2\kappa_5^2) + \mathcal{L}_q]$, in the spirit of Randall-Sundrum / DGP braneworlds.
@@ -65,7 +65,7 @@ The skeleton above leaves seven substantial pieces unsupplied. Each is an explic
 6. **Operational FTL versus [Nopper 2025a]'s prohibition.** Chord traversal is timelike in the bulk but superluminal in $S^3$ projection. This must be reconciled either by extending [Nopper 2025a]'s causal cone to the bulk metric, or by adding a chronology-protection term that suppresses antipodal jumps.
 7. **Tunnelling rate.** A field-theoretic Coleman-De Luccia bounce calculation should replace the 1D-WKB heuristic; this gives the actual jump amplitude as a function of $\lambda$, $R$, and cargo geometry.
 
-A consistent closure of items 1-2 alone would already promote the proposal from a kinematic skeleton to a candidate dynamical theory; items 3-5 would make it phenomenologically meaningful; items 6-7 are interpretive and technical respectively.
+A consistent closure of items 1–2 alone would already promote the proposal from a kinematic skeleton to a candidate dynamical theory; items 3–5 would make it phenomenologically meaningful; items 6–7 are interpretive and technical respectively.
 
 ---
 
@@ -82,7 +82,7 @@ Earlier formulations of this proposal invoked the interval-number algebra of [No
 | Quaternion-Hypersphere Theory [Nopper 2025a] | Identifies $\mathbb{R}^4$ as the embedding space; supplies chord-path geometry and the $S^3$ vacuum structure |
 | Quaternionic linear sigma model (this note) | Provides a candidate bulk Lagrangian whose vacuum manifold is $S^3$ and whose excited states traverse the bulk |
 
-The model is **geometrically coherent and singularity-free**, but **not yet dynamically complete**: the seven open subproblems listed in the Roadmap section above must be closed before it can be considered a candidate physical theory. It introduces, beyond [Nopper 2025a], the $O(4)$-symmetric quartic potential $V(|q|) = \lambda(|q|^2 - R^2)^2$ with a single coupling $\lambda$. The coupling has a clean physical interpretation (barrier height $E_\star = \lambda R^4$, brane thickness $\ell_\perp = 1/(\sqrt{\lambda}\,R)$, transit-energy density $\rho_\star = \lambda R^4$) but no fixed numerical value at present. The model makes no empirical predictions, and there is no experimental evidence for macroscopic bulk traversal.
+The model is **geometrically coherent and singularity-free**, but **not yet dynamically complete**: the seven open subproblems listed above must be closed before it can be considered a candidate physical theory. It introduces, beyond [Nopper 2025a], the $O(4)$-symmetric quartic potential $V(|q|) = \lambda(|q|^2 - R^2)^2$ with a single coupling $\lambda$. The coupling has a clean physical interpretation (barrier height $E_\star = \lambda R^4$, brane thickness $\ell_\perp = 1/(\sqrt{\lambda}\,R)$, transit-energy density $\rho_\star = \lambda R^4$) but no fixed numerical value at present. The model makes no empirical predictions, and there is no experimental evidence for macroscopic bulk traversal.
 
 ---
 
@@ -115,11 +115,12 @@ The model is **geometrically coherent and singularity-free**, but **not yet dyna
 - [Faster-than-light](https://en.wikipedia.org/wiki/Faster-than-light)
 - [Geodesic](https://en.wikipedia.org/wiki/Geodesic)
 
-### Science fiction
-The concept of interstellar travel via a higher-dimensional shortcut is a recurring motif in science fiction, predating its mathematical formalization. Notable examples include hyperspatial jumps [Asimov 1951], foldspace navigation [Herbert 1965], subspace [Roddenberry 1966], hyperspace [Lucas 1977], and discrete jump drives [Banks 1987].
+### Inspirational background (science fiction)
 
-- [Asimov 1951] Asimov, I. *Foundation*. Gnome Press, 1951.
-- [Herbert 1965] Herbert, F. *Dune*. Chilton Books, 1965.
-- [Roddenberry 1966] Roddenberry, G. *Star Trek* (TV series). NBC, 1966.
-- [Lucas 1977] Lucas, G. *Star Wars: Episode IV – A New Hope*. 20th Century Fox, 1977.
-- [Banks 1987] Banks, I. M. *Consider Phlebas*. Macmillan, 1987.
+The motivating question of this note — whether a higher-dimensional shortcut between distant points of our spatial universe could be physically realisable — is a recurring motif in twentieth-century science fiction. The works listed below served only as *inspiration* for posing the question in the first place; they form no part of the physics or mathematics presented above, and no claim is made that the corresponding fictional devices realise the proposed mechanism.
+
+- [Asimov 1951] Asimov, I. *Foundation*. Gnome Press, 1951. — hyperspatial jumps.
+- [Herbert 1965] Herbert, F. *Dune*. Chilton Books, 1965. — foldspace navigation.
+- [Roddenberry 1966] Roddenberry, G. *Star Trek* (TV series). NBC, 1966. — subspace.
+- [Lucas 1977] Lucas, G. *Star Wars: Episode IV – A New Hope*. 20th Century Fox, 1977. — hyperspace.
+- [Banks 1987] Banks, I. M. *Consider Phlebas*. Macmillan, 1987. — discrete jump drives.
