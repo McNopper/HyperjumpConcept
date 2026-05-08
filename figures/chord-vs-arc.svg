@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" font-family="Georgia, 'Times New Roman', serif" font-size="14">
+  <rect width="720" height="360" fill="#ffffff"/>
+
+  <text x="360" y="24" text-anchor="middle" font-size="15" font-weight="bold">
+    Chord through R^(n+1) versus geodesic arc on S^n  (illustrated for n = 1)
+  </text>
+
+  <!-- Panel A: non-antipodal -->
+  <text x="180" y="50" text-anchor="middle" font-style="italic">Non-antipodal jump (θ = 120°)</text>
+  <text x="180" y="320" text-anchor="middle" fill="#666">R^(n+1) bulk (Euclidean interior)</text>
+
+  <circle cx="180" cy="190" r="100" fill="#f5f7fb" stroke="none"/>
+  <circle cx="180" cy="190" r="100" fill="none" stroke="#222" stroke-width="2"/>
+  <text x="80" y="100" fill="#222">S^n  (|q| = R)</text>
+
+  <circle cx="180" cy="190" r="3" fill="#222"/>
+  <text x="187" y="207" font-style="italic" fill="#222">|q| = 0</text>
+
+  <line x1="180" y1="190" x2="266.6" y2="140" stroke="#888" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="232" y="172" fill="#666" font-style="italic">R</text>
+
+  <circle cx="266.6" cy="140" r="4" fill="#c00"/>
+  <text x="272" y="135" fill="#c00">q1</text>
+
+  <circle cx="93.4" cy="140" r="4" fill="#c00"/>
+  <text x="74" y="135" fill="#c00">q2</text>
+
+  <path d="M 266.6 140 A 100 100 0 0 0 93.4 140" fill="none" stroke="#0a6" stroke-width="2.5"/>
+  <text x="180" y="78" text-anchor="middle" fill="#0a6">arc:  R θ</text>
+
+  <line x1="266.6" y1="140" x2="93.4" y2="140" stroke="#06c" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="180" y="158" text-anchor="middle" fill="#06c">chord:  2R sin(θ/2)</text>
+
+  <path d="M 200 178.5 A 23 23 0 0 0 160.0 178.5" fill="none" stroke="#888" stroke-width="1"/>
+  <text x="180" y="175" text-anchor="middle" fill="#666" font-style="italic">θ</text>
+
+  <line x1="180" y1="190" x2="180" y2="140" stroke="#888" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="184" y="167" fill="#666" font-size="12">R cos(θ/2)</text>
+
+  <!-- Panel B: antipodal -->
+  <text x="540" y="50" text-anchor="middle" font-style="italic">Antipodal jump (θ = 180°)</text>
+  <text x="540" y="320" text-anchor="middle" fill="#666">chord passes through |q| = 0</text>
+
+  <circle cx="540" cy="190" r="100" fill="#f5f7fb" stroke="none"/>
+  <circle cx="540" cy="190" r="100" fill="none" stroke="#222" stroke-width="2"/>
+  <text x="440" y="100" fill="#222">S^n  (|q| = R)</text>
+
+  <circle cx="540" cy="190" r="3" fill="#222"/>
+  <text x="547" y="207" font-style="italic" fill="#222">|q| = 0</text>
+
+  <circle cx="640" cy="190" r="4" fill="#c00"/>
+  <text x="648" y="195" fill="#c00">q1</text>
+
+  <circle cx="440" cy="190" r="4" fill="#c00"/>
+  <text x="416" y="195" fill="#c00">q2</text>
+
+  <path d="M 640 190 A 100 100 0 0 0 440 190" fill="none" stroke="#0a6" stroke-width="2.5"/>
+  <text x="540" y="78" text-anchor="middle" fill="#0a6">arc:  pi R</text>
+
+  <line x1="640" y1="190" x2="440" y2="190" stroke="#06c" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="540" y="180" text-anchor="middle" fill="#06c">chord:  2 R</text>
+
+  <text x="540" y="245" text-anchor="middle" fill="#444" font-size="12">
+    chord / arc = 2/pi ~ 0.637  (~36% shorter)
+  </text>
+
+  <text x="360" y="346" text-anchor="middle" font-size="12" fill="#444">
+    The hyperjump trajectory (dashed blue) leaves S^n, traverses R^(n+1), and re-enters at q2.
+  </text>
+</svg>

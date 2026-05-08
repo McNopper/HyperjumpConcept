@@ -12,7 +12,9 @@ Within the Quaternion-Hypersphere Theory of Spacetime [Nopper 2025a], the spatia
 
 ## The Geometric Argument
 
-A point on the spatial hypersphere satisfies $|q| = R$. Two points $q_1, q_2 \in S^3_R$ separated by angular distance $\theta$ admit two path types:
+A point on the spatial hypersphere satisfies $|q| = R$. Two points $q_1, q_2 \in S^3_R$ separated by angular distance $\theta$ admit two path types: a geodesic *arc* of length $R\theta$ that stays on $S^3$, and a straight-line *chord* through the embedding $\mathbb{R}^4$ of length $2R\sin(\theta/2)$. The two-dimensional analogue ($S^1 \subset \mathbb{R}^2$) is shown below.
+
+![Chord vs arc on a hypersphere](figures/chord-vs-arc.svg)
 
 | Path | Parameterization | Length |
 |------|-----------------|--------|
