@@ -14,3 +14,7 @@
 
 # Preview / scratch
 _preview/
+
+# Python
+__pycache__/
+*.pyc
