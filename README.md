@@ -155,8 +155,8 @@ The model is **geometrically coherent and singularity-free**, but **not yet dyna
 ## References
 
 ### Foundations of this work
-- [Nopper 2025a] Nopper, N. *Quaternion-Hypersphere Theory of Spacetime*. GitHub, 2025. <https://github.com/McNopper/SpacetimeTheory>
-- [Nopper 2025b] Nopper, N. *Interval Numbers: A Formal Algebraic Framework for Indeterminate Forms*. GitHub, 2025. <https://github.com/McNopper/ZeroInfinity>
+- [Nopper 2025a] Nopper, N. *Quaternion–Hypersphere Theory of Spacetime: A Conceptual Synthesis of Closed FLRW Cosmology, Quaternionic $S^3$ Parameterization, and Relational Time*. 2025. <https://github.com/McNopper/SpacetimeTheory/blob/main/SpacetimeTheory.pdf>
+- [Nopper 2025b] Nopper, N. *Interval Numbers: A Formal Algebraic Framework for Indeterminate Forms*. 2025. <https://github.com/McNopper/ZeroInfinity/blob/main/paper.pdf>
 
 ### Extra dimensions and braneworld models
 - [Kaluza 1921] Kaluza, T. "Zum Unitätsproblem der Physik." *Sitzungsberichte der Preußischen Akademie der Wissenschaften* (1921) 966–972.
