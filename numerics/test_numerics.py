@@ -167,6 +167,24 @@ def test_symbolic_kink_fails_without_W() -> None:
     assert abs(val) > 0.1, f"scalar residual unexpectedly small: {val}"
 
 
+def test_pinn_coupled_matches_analytic() -> None:
+    """Coupled DFGK PINN must recover phi_*=tanh(r), A_* analytic to ~10%."""
+    try:
+        import torch  # noqa: F401
+    except ImportError:
+        print("    (skip: torch not installed)")
+        return
+    from pinn_coupled import train, evaluate, analytic_phi, analytic_A
+    model = train(seed=0, adam_iters=2000, lbfgs_iters=100, verbose=False)
+    r, phi, A = evaluate(model)
+    phi_ex = analytic_phi(r); A_ex = analytic_A(r)
+    A = A - A[len(r) // 2]; A_ex = A_ex - A_ex[len(r) // 2]
+    err_phi = float(np.max(np.abs(phi - phi_ex)))
+    err_A = float(np.max(np.abs(A - A_ex)))
+    assert err_phi < 0.15, f"phi error {err_phi}"
+    assert err_A < 0.10, f"A error {err_A}"
+
+
 def run_all() -> int:
     tests = [v for k, v in globals().items() if k.startswith("test_") and callable(v)]
     failures = 0

@@ -198,7 +198,7 @@ def _verify_dfgk() -> None:
     """
     phi = sp.symbols("phi", real=True)
     W = sp.Function("W")(phi)
-    V_expr = sp.Rational(1, 2) * sp.diff(W, phi) ** 2 - sp.Rational(4, 3) * W ** 2
+    V_sym = sp.Rational(1, 2) * sp.diff(W, phi) ** 2 - sp.Rational(2, 3) * W ** 2
 
     r = sp.symbols("r", real=True)
     phi_r = sp.Function("phi")(r)
@@ -212,8 +212,8 @@ def _verify_dfgk() -> None:
     print("  DFGK first-order flow:")
     print(f"    phi'(r) - dW/dphi   = {sp.simplify(eom1)}")
     print(f"    A'(r)   + W/3       = {sp.simplify(eom2)}")
-    print(f"    induced V(phi)      = (1/2)(dW/dphi)^2 - (4/3) W^2")
-    print(f"                        = {sp.simplify(V_expr)}")
+    print(f"    induced V(phi)      = (1/2)(dW/dphi)^2 - (2/3) W^2")
+    print(f"                        = {sp.simplify(V_sym)}")
 
 
 def main() -> None:

@@ -15,8 +15,9 @@ replacement once the parameter space gets serious.
 | `cosmology.py` | Subproblem 1 ($\Phi(\tau)$ dynamics) | Integrates $\ddot\Phi+3H\dot\Phi+U'=0$ with self-consistent Friedmann for $U=\tfrac12 m^2\Phi^2$. Yields ~67 e-folds of quasi-de Sitter then reheating-like oscillations. |
 | `gravity_bound.py` | Subproblem 5 (Lee et al. 2020) | Plots the allowed region $\sqrt\lambda\,v > 1/\ell_\perp$ in the $(\lambda,v)$ plane; recovers the 3.8 meV headline. |
 | `pinn_hedgehog.py` | Subproblem 2 toolchain | PyTorch PINN for the hedgehog BVP. Boundary conditions baked in via an output transform; cross-checks against `solve_bvp` to ~1e-3 with a tiny MLP. Scaffold for the coupled $(g_{MN},\phi^A)$ problem where no closed-form ansatz works. |
-| `symbolic_search.py` | Subproblem 2 ansatz discovery | (i) `gplearn` rediscovers $\phi_0\propto\tanh(kr)$ from sampled kink data; (ii) `sympy` checks candidate warp factors $A(r)$ against the 5D Einstein + scalar equations; (iii) verifies the DeWolfe–Freedman–Gubser–Karch superpotential flow $\phi'=W'$, $A'=-W/3$, $V=\tfrac12 W'^2-\tfrac43 W^2$. |
-| `test_numerics.py` | — | Regression tests: 12 cases covering all of the above. Run with `python test_numerics.py`. |
+| `pinn_coupled.py` | Subproblem 2 (explicit closure) | PyTorch PINN for the **coupled** 5D Einstein + sigma system in the warped ansatz, using the DeWolfe–Freedman–Gubser–Karch superpotential $W(\phi)=\phi-\phi^3/(3v^2)$. Recovers $\phi_*(r)=v\tanh(r/v)$ and the closed-form warp factor $A_*(r)$ — an explicit self-consistent 5D background of the kind the hyperjump skeleton requires. |
+| `symbolic_search.py` | Subproblem 2 ansatz discovery | (i) `gplearn` rediscovers $\phi_0\propto\tanh(kr)$ from sampled kink data; (ii) `sympy` checks candidate warp factors $A(r)$ against the 5D Einstein + scalar equations; (iii) verifies the DFGK superpotential flow $\phi'=W'$, $A'=-W/3$, $V=\tfrac12 W'^2-\tfrac23 W^2$. |
+| `test_numerics.py` | — | Regression tests: 13 cases covering all of the above. Run with `python test_numerics.py`. |
 
 ## Run
 
@@ -30,8 +31,9 @@ python kk_spectrum.py
 python cosmology.py
 python gravity_bound.py
 python pinn_hedgehog.py    # requires `pip install torch`
+python pinn_coupled.py     # requires `pip install torch`
 python symbolic_search.py  # requires `pip install gplearn sympy`
-python test_numerics.py    # regression tests, 12/12 should pass
+python test_numerics.py    # regression tests, 13/13 should pass
 ```
 
 Each script writes a PNG to `figures/` and prints a short numerical summary.
