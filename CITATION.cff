@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "Hyperjump via the Fourth Spatial Dimension"
+message: "If you reference this work, please cite it as below."
+type: article
+authors:
+  - family-names: Nopper
+    given-names: Norbert
+abstract: >
+  A programme note exploring whether two points of a closed three-sphere
+  universe (S^3) can be connected by a straight chord through the
+  embedding R^4 instead of along a geodesic arc on S^3. A quaternionic
+  linear sigma model is proposed as a candidate dynamical skeleton, and
+  eight open subproblems are listed with first-pass closures.
+keywords:
+  - cosmology
+  - braneworld
+  - sigma model
+  - quaternion
+  - hypersphere
+  - faster-than-light
+repository-code: "https://github.com/McNopper/HyperjumpConcept"
+license: MIT
+year: 2025

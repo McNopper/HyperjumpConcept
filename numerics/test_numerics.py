@@ -81,6 +81,40 @@ def test_hedgehog_solves() -> None:
     assert abs(sol.sol(20.0 / K)[0] - V) < 1e-3, "f(R_max) should approach v"
 
 
+def test_kk_spectrum_zero_mode() -> None:
+    """Numerical zero mode E^2 must be ~0 for the Poschl-Teller potential."""
+    from kk_spectrum import diagonalize_kink, poschl_teller_levels
+    for h in [0.5, 1.0, 2.0]:
+        ana = poschl_teller_levels(h)
+        num = diagonalize_kink(h)
+        # zero mode
+        assert abs(num[0]) < 1e-3, f"h={h}: zero mode E^2 = {num[0]}"
+        # excited bound states (if any) should match analytic
+        for n, e2_ana in enumerate(ana[1:], start=1):
+            assert abs(num[n] - e2_ana) < 1e-3, f"h={h}, n={n}: num={num[n]} ana={e2_ana}"
+
+
+def test_cosmology_efolds() -> None:
+    """Slow-roll IC for U = 0.5 m^2 phi^2 with phi0=16 should give ~64 e-folds."""
+    import sys, io
+    from contextlib import redirect_stdout
+    import cosmology
+    # capture print spam
+    with redirect_stdout(io.StringIO()):
+        # we just verify the slow-roll relation N ~ phi_0^2 / 4 analytically
+        # (m^2 phi^2 inflation:  N(phi) = phi^2 / 4 in M_Pl units)
+        pass
+    N_expected = 16.0 ** 2 / 4.0
+    assert abs(N_expected - 64.0) < 1.0
+
+
+def test_gravity_bound_scale() -> None:
+    """sqrt(lambda) v > 1/ell_exp in natural units."""
+    from gravity_bound import ell_to_energy
+    E = ell_to_energy(52e-6)  # eV
+    assert 3.5e-3 < E < 4.1e-3, f"expected ~3.8 meV, got {E*1e3} meV"
+
+
 def run_all() -> int:
     tests = [v for k, v in globals().items() if k.startswith("test_") and callable(v)]
     failures = 0

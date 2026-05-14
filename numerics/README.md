@@ -8,8 +8,13 @@ replacement once the parameter space gets serious.
 | Script | Paper item | What it computes |
 |---|---|---|
 | `geometry.py` | §"Geometric argument" | Chord length `2 R sin(θ/2)` vs. arc length `R θ` on $S^3$, verifies the ~36 % antipodal shortening, dumps a plot. |
-| `bounce.py` | Subproblem 7 (tunnelling rate) | O(d)-symmetric Coleman bounce action $B$ for $V(\phi)=\lambda(|\phi|^2-v^2)^2$ via shooting, in $d=5$ Euclidean. Gives $\Gamma/\mathcal V_5 \sim \mu^5 e^{-B}$. |
-| `localization.py` | Subproblem 3 (SM zero modes) | Kink background $\phi_0(r)=v\tanh(\sqrt{2\lambda}\,v\,r)$ + numerical solution of the transverse Dirac zero mode with Yukawa profile $m_\Psi=h\phi_0$. Cross-checks the analytic $\mathrm{sech}^{h/(\sqrt{2\lambda}v)}$ profile. |
+| `bounce.py` | Subproblem 7 (tunnelling rate) | Symmetric double-well has no Coleman bounce — computes the correct saddle: kink surface tension $\sigma=(4\sqrt 2/3)\sqrt\lambda v^3$ (analytic + numeric) and the cargo-traversal action $B_{\rm phys}\sim\sigma\cdot(\text{wall worldvolume})$. |
+| `localization.py` | Subproblem 3 (SM zero modes) | Kink $\phi_0(r)=v\tanh(\sqrt{2\lambda}vr)$ + numerical solution of the transverse Dirac zero mode with Yukawa profile $m_\Psi=h\phi_0$; cross-checks the analytic $\mathrm{sech}^{h/k}$ profile. |
+| `hedgehog.py` | §Skeleton caveat (line ~168) | Global-monopole BVP on $\mathbb R^4$. Shows the angular gradient $1.5f^2/\rho^2$ dominates, giving energy that grows with the IR cutoff — confirming the natural defect is a centred hedgehog, not a thin shell. |
+| `kk_spectrum.py` | Subproblem 3 (mass gap) | Pöschl–Teller spectrum of the squared Dirac operator on the kink: analytic levels $E_n^2 = h^2v^2 - k^2(s-n)^2$ vs. finite-difference diagonalization. Plots the KK-like tower vs. Yukawa coupling. |
+| `cosmology.py` | Subproblem 1 ($\Phi(\tau)$ dynamics) | Integrates $\ddot\Phi+3H\dot\Phi+U'=0$ with self-consistent Friedmann for $U=\tfrac12 m^2\Phi^2$. Yields ~67 e-folds of quasi-de Sitter then reheating-like oscillations. |
+| `gravity_bound.py` | Subproblem 5 (Lee et al. 2020) | Plots the allowed region $\sqrt\lambda\,v > 1/\ell_\perp$ in the $(\lambda,v)$ plane; recovers the 3.8 meV headline. |
+| `test_numerics.py` | — | Regression tests: 9 cases covering all of the above. Run with `python test_numerics.py`. |
 
 ## Run
 
@@ -18,6 +23,11 @@ pip install -r requirements.txt
 python geometry.py
 python bounce.py
 python localization.py
+python hedgehog.py
+python kk_spectrum.py
+python cosmology.py
+python gravity_bound.py
+python test_numerics.py    # regression tests, 9/9 should pass
 ```
 
 Each script writes a PNG to `figures/` and prints a short numerical summary.
