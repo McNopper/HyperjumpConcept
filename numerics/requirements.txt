@@ -1,3 +1,7 @@
 numpy>=1.26
 scipy>=1.11
 matplotlib>=3.8
+sympy>=1.12
+# Optional, only needed for pinn_hedgehog.py and symbolic_search.py
+torch>=2.2
+gplearn>=0.4

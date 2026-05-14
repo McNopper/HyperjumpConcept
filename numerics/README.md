@@ -14,7 +14,9 @@ replacement once the parameter space gets serious.
 | `kk_spectrum.py` | Subproblem 3 (mass gap) | Pöschl–Teller spectrum of the squared Dirac operator on the kink: analytic levels $E_n^2 = h^2v^2 - k^2(s-n)^2$ vs. finite-difference diagonalization. Plots the KK-like tower vs. Yukawa coupling. |
 | `cosmology.py` | Subproblem 1 ($\Phi(\tau)$ dynamics) | Integrates $\ddot\Phi+3H\dot\Phi+U'=0$ with self-consistent Friedmann for $U=\tfrac12 m^2\Phi^2$. Yields ~67 e-folds of quasi-de Sitter then reheating-like oscillations. |
 | `gravity_bound.py` | Subproblem 5 (Lee et al. 2020) | Plots the allowed region $\sqrt\lambda\,v > 1/\ell_\perp$ in the $(\lambda,v)$ plane; recovers the 3.8 meV headline. |
-| `test_numerics.py` | — | Regression tests: 9 cases covering all of the above. Run with `python test_numerics.py`. |
+| `pinn_hedgehog.py` | Subproblem 2 toolchain | PyTorch PINN for the hedgehog BVP. Boundary conditions baked in via an output transform; cross-checks against `solve_bvp` to ~1e-3 with a tiny MLP. Scaffold for the coupled $(g_{MN},\phi^A)$ problem where no closed-form ansatz works. |
+| `symbolic_search.py` | Subproblem 2 ansatz discovery | (i) `gplearn` rediscovers $\phi_0\propto\tanh(kr)$ from sampled kink data; (ii) `sympy` checks candidate warp factors $A(r)$ against the 5D Einstein + scalar equations; (iii) verifies the DeWolfe–Freedman–Gubser–Karch superpotential flow $\phi'=W'$, $A'=-W/3$, $V=\tfrac12 W'^2-\tfrac43 W^2$. |
+| `test_numerics.py` | — | Regression tests: 12 cases covering all of the above. Run with `python test_numerics.py`. |
 
 ## Run
 
@@ -27,7 +29,9 @@ python hedgehog.py
 python kk_spectrum.py
 python cosmology.py
 python gravity_bound.py
-python test_numerics.py    # regression tests, 9/9 should pass
+python pinn_hedgehog.py    # requires `pip install torch`
+python symbolic_search.py  # requires `pip install gplearn sympy`
+python test_numerics.py    # regression tests, 12/12 should pass
 ```
 
 Each script writes a PNG to `figures/` and prints a short numerical summary.

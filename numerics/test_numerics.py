@@ -115,6 +115,58 @@ def test_gravity_bound_scale() -> None:
     assert 3.5e-3 < E < 4.1e-3, f"expected ~3.8 meV, got {E*1e3} meV"
 
 
+def test_pinn_hedgehog_matches_bvp() -> None:
+    """Short PINN run must agree with solve_bvp to a few percent."""
+    try:
+        import torch  # noqa: F401
+    except ImportError:
+        print("    (skip: torch not installed)")
+        return
+    from pinn_hedgehog import train, evaluate, K, V
+    from hedgehog import ode, bc
+    from scipy.integrate import solve_bvp
+
+    # short training run -- just enough to confirm the toolchain works
+    model, _ = train(seed=0, adam_iters=1500, lbfgs_iters=100, verbose=False)
+    rho, f_pinn = evaluate(model)
+
+    rho_bvp = np.linspace(1e-3 / K, 20.0 / K, 400)
+    y0 = np.vstack([V * np.tanh(K * rho_bvp), V * K / np.cosh(K * rho_bvp) ** 2])
+    sol = solve_bvp(ode, bc, rho_bvp, y0, tol=1e-7, max_nodes=20000)
+    assert sol.success
+    f_bvp = sol.sol(rho)[0]
+
+    err = float(np.max(np.abs(f_pinn - f_bvp)))
+    assert err < 5e-2, f"PINN error vs BVP too large: {err}"
+    # exact BCs from output transform
+    assert abs(f_pinn[-1] - V) < 1e-6, f"PINN BC at R_max failed: {f_pinn[-1]}"
+
+
+def test_symbolic_warped_residuals() -> None:
+    """warped_residuals must symbolically vanish for the trivial flat-space
+    background with constant phi=v (a vacuum solution of the system)."""
+    import sympy as sp
+    from symbolic_search import warped_residuals
+    A = sp.Integer(0)
+    phi = sp.Integer(1)  # = v, sitting at the vacuum
+    Err, Emumu, scalar = warped_residuals(A, phi, lam=1, v=1)
+    assert sp.simplify(Err) == 0
+    assert sp.simplify(Emumu) == 0
+    assert sp.simplify(scalar) == 0
+
+
+def test_symbolic_kink_fails_without_W() -> None:
+    """The bare kink phi(r) = tanh(k r) with A=0 does NOT solve the coupled
+    equations -- the scalar EoM residual should be non-zero."""
+    import sympy as sp
+    from symbolic_search import warped_residuals, _R
+    k = sp.Symbol("k", positive=True)
+    phi = sp.tanh(k * _R)
+    Err, Emumu, scalar = warped_residuals(sp.Integer(0), phi, lam=1, v=1)
+    val = float(scalar.subs({k: 1.0, _R: 0.5}))
+    assert abs(val) > 0.1, f"scalar residual unexpectedly small: {val}"
+
+
 def run_all() -> int:
     tests = [v for k, v in globals().items() if k.startswith("test_") and callable(v)]
     failures = 0
